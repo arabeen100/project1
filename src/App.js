@@ -84,7 +84,6 @@ function App() {
   const handleDelete=async (id)=>{
     const listItems=items.filter((item)=>item.id!==id);
     setItems(listItems)
-    const myItem= listItems.filter(item=>item.id===id)
     const deleteOptions={method:"DELETE"};
     const reqUrl=`${API_URL}/${id}`
     const result= await apiReq(reqUrl,deleteOptions);
